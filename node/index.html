@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+            * {box-sizing: border-box;}
+
+            /* The popup chat - hidden by default */
+            .chat-popup {
+                position: fixed;
+                bottom: 0;
+                right: 15px;
+                border: 3px solid #f1f1f1;
+                z-index: 9;
+            }
+
+            /* Add styles to the form container */
+            .form-container {
+                max-width: 300px;
+                padding: 10px;
+                background-color: white;
+            }
+
+            /* Full-width textarea */
+            .form-container textarea {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+                resize: none;
+                min-height: 100px;
+            }
+
+            /* When the textarea gets focus, do something */
+            .form-container textarea:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+            .chat_history{
+                min-height:200px;
+                overflow:auto;
+            }
+            .chat_history p{
+                background: #f5f5f5;
+                color:#444;
+                padding:7px;
+                margin-bottom:5px;
+            }
+
+
+            /* Set a style for the submit/send button */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="userdata"></div>
+            
+            <div id="users">
+
+            </div>
+            <div id="self_online">
+
+            </div>
+            <div id="already_online">
+
+            </div>
+
+        </div>
+        <div class="chat-popup" id="myForm">
+            <div>Broadcast</div>
+            <div class="broadcast"></div>
+            <div  class="form-container">
+                <h1>Chat</h1>
+                <div class="chat_history">
+                    <div class="chat">
+                    </div>
+
+                </div>
+                <input type="text"  class="sender_id" value="" placeholder="Sender id  ">
+                <input type="text"  class="receiver_id" value="" placeholder="Reciver ID">
+                <label for="msg"><b>Message</b></label>
+
+                <textarea placeholder="Type message.." class="message" name="msg" ></textarea>
+                <button type="button" class="btn btn-info" onclick="sendMessage();">Send</button> 
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Upload images to server using Node JS</title>
+        <script src="http://dagadu.in/package/js/jquery-3.1.1.min.js"></script>
+        <script src="http://dagadu.in/package/js/jquery.form.min.js"></script>
+        <script>
+                    $(document).ready(function () {
+                        var options = {
+                            beforeSubmit: showRequest, // pre-submit callback
+                            success: showResponse  // post-submit callback
+                        };
+
+                        // bind to the form's submit event
+                        $('#frmUploader').submit(function () {
+                            $(this).ajaxSubmit(options);
+                            // always return false to prevent standard browser submit and page navigation
+                            return false;
+                        });
+                    });
+
+                    // pre-submit callback
+                    function showRequest(formData, jqForm, options) {
+                        alert('Uploading is starting.');
+                        return true;
+                    }
+
+                    // post-submit callback
+                    function showResponse(responseText, statusText, xhr, $form) {
+                        alert('status: ' + statusText + '\n\nresponseText: \n' + responseText);
+                    }
+        </script>
+    </head>
+    <body>
+       
+    </body>
+
+  
+   
+    <script type="text/javascript">
+        var socket = io.connect('http://localhost:3000/');
+        //send msg
+        function sendMessage() {
+            //1=>group,2=>one to one chat
+            var message = $(".message").val();
+            socket.emit('sendmessage', {
+                message_type:"0",
+                login_from: '0', 
+                sender_id: $(".sender_id").val(), 
+                receiver_id: $(".receiver_id").val(),
+                message: message, 
+                date_time: '2020-11-18 01:20:30'
+             }, function (data) {});
+            $(".message").val('');
+            return false;
+        }
+
+        
+        //receive msg
+        socket.on('getmessage', function (msg) {
+            console.log(msg);
+            var img = "https://www.myplantech.com/uploads/chat_files/";
+            var new_message = msg.message;
+            $(".chat").append('<br><p class="pull-right">' + new_message + '</p><br>');
+        });
+      
+        
+       
+    </script>
+</html>

@@ -1,0 +1,139 @@
+/*Css Create by Rajendra Chandeliya 
+Created Date 23 Sep. 2021
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap');
+body {
+    color: #212121;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: 'Nunito Sans', sans-serif !important;
+}
+.h6, h6 {
+    font-size: 14px; font-family: 'Nunito Sans', sans-serif !important;
+}
+p { margin: 0 0 3px; }
+
+.project-e-sign div {
+    margin: 10px 0;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2; font-family: 'Nunito Sans', sans-serif !important;
+   
+}
+.sale-view-style .table td b {
+    color: #000;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent; font-family: 'Nunito Sans', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;width: 100%;font-family: 'Nunito Sans', sans-serif;
+}
+.sale-view-style .table td {
+    color: #212121;font-family: 'Nunito Sans', sans-serif;
+}
+.table tbody td {
+    vertical-align: middle;font-family: 'Nunito Sans', sans-serif;
+
+}
+.table td, .table th {
+    padding: 0.5rem;font-family: 'Nunito Sans', sans-serif;
+}
+.table thead th {font-weight: 600;
+    padding: 0.5rem;font-family: 'Nunito Sans', sans-serif;
+}
+.table-border-remove td, .table-border-remove th {
+    border-top: 0;font-family: 'Nunito Sans', sans-serif;
+}
+.th-bg-light {
+    background: #f3f2f7;text-align: left;font-family: 'Nunito Sans', sans-serif;
+}
+.cleaning-maintenance {
+    margin-top: 0px;
+}
+.sale-view-style legend {
+    font-size: 16px;width: 100%;
+    color: #004c1e;
+    font-weight: 700;font-family: 'Nunito Sans', sans-serif;
+    text-align: left!important;margin-bottom: 10px;
+}
+.text-center {
+    text-align: center!important;
+}
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+.table thead {
+    background-color: #f3f2f7;font-family: 'Nunito Sans', sans-serif;
+}
+.table thead th {
+    font-weight: 600;
+    color: #0f1a25;
+    font-size: 13px;
+    border-bottom: 0;font-family: 'Nunito Sans', sans-serif;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid #dee2e6;font-family: 'Nunito Sans', sans-serif;
+}
+.form-group {
+    margin-bottom: 10px;font-family: 'Nunito Sans', sans-serif;font-size: 12px;
+}
+.sale-view-style .project-e-sign {
+    padding-top: 20px;font-family: 'Nunito Sans', sans-serif;
+    border-top: 0px solid #ddd;margin-top: 0;
+}
+div { font-family: 'Nunito Sans', sans-serif;font-size: 13px; }
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+.card .card-header {
+    padding: 10px 15px;
+    border: 0;
+    background: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+.card .card-header h3 {
+    margin: 0;font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    color: #004c1e;
+    font-weight: 700;
+}
+.card .card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.card .card-header {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.p-2 {
+    padding: .5rem!important;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+.border {
+    border: 1px solid #dee2e6!important;
+}
+
+.project-basic-info p { margin: 0 0 3px; }
+
+

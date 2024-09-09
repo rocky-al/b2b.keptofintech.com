@@ -1,0 +1,54 @@
+
+        @page {
+            height: 297mm;
+            width: 210mm;
+            margin: 10mm
+        }
+
+        @media print {
+
+            .page-header,
+            .page-header-space {
+                height: 150px;
+            }
+
+            .page-footer,
+            .page-footer-space {
+                height: 50px;
+            }
+
+            .page-header {
+                position: fixed;
+                top: 0mm;
+                width: 100%;
+                border-bottom: 1px solid black;
+            }
+
+            .page-footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                border-top: 1px solid black;
+            }
+
+            td {
+                padding: 10px 25px;
+            }
+
+            thead {
+                display: table-header-group;
+            }
+
+            tfoot {
+                display: table-footer-group;
+            }
+
+            button {
+                display: none;
+            }
+
+            body {
+                margin: 0;
+            }
+        }
+  

@@ -1,0 +1,28 @@
+/*Css Create by Rajendra Chandeliya 
+Created Date 19 Aug 2021
+*/
+/*forgot_password_form*/
+.forgot_password_form .logo-centered{ width: unset!important; }
+.auth-wrapper .lavalite-bg .lavalite-overlay { background-color: rgb(9 50 25);
+background: rgb(9 50 25);opacity:1; }
+.auth-wrapper .lavalite-bg { display: flex; justify-content: center; padding-top: 50px;}
+.lavalite-bg-text h2 { font-weight: 800;color: #fff;font-size: 45px; }
+.lavalite-bg-text p { color: #fff;font-size: 16px; }
+.lavalite-bg-text { position: relative; }
+.auth-wrapper .authentication-form .logo-centered { margin-bottom: 60px; }
+.auth-wrapper .authentication-form .form-group .form-control ~ i { top: 40px; }
+.auth-wrapper .authentication-form { padding: 20px 0; }
+.auth-wrapper .authentication-form .sign-btn .btn-primary {     background-color: #093219;
+ border: 1px solid #093219;padding: 10px 14px; height: 38px;}
+ .logo-centered-text h2 { font-weight: 700; }
+ .logo-centered-text p { margin-bottom: 50px; }
+ .reset-password .form-group .form-control ~ i { top: 10px !important; }
+
+
+.auth-wrapper .authentication-form .logo-centered{margin-bottom:20px;}
+.auth-wrapper .lavalite-bg .lavalite-overlay{background:#ecf1f4}
+.auth-wrapper .authentication-form .sign-btn .btn-primary{background-color:#34cffd;border-color:#34cffd;}
+.auth-wrapper .authentication-form.reset-password .logo-centered{margin:unset;margin-bottom: 30px;}
+
+.lavalite-bg{background-image:url(../../img/auth/login-bg-new.jpg) !important;}
+.auth-wrapper .authentication-form{width: unset;max-width:50%;}
